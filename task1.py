@@ -2,10 +2,13 @@
 
 # Пример:
 # - 0,56 -> 11
-
-n = float(input('Введите число: '))
+print('Введите число: ')
+n = input()
+ 
 sum = 0
-while n % 10 > 0:
-    sum = sum + n%10
-
-print(sum)
+ 
+for digit in n:
+    if digit.isdigit():
+        sum += int(digit)
+    
+print("Сумма цифр в числе: ", sum)
